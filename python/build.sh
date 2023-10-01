@@ -11,9 +11,7 @@ sudo apt-get install -y make build-essential libssl-dev zlib1g-dev \
        libncurses5-dev libncursesw5-dev xz-utils tk-dev
 
 mkdir -p ~/build
-./configure --enable-optimizations --with-ensurepip=install --prefix=$HOME/build
+./configure --enable-optimizations --with-ensurepip=install --prefix=$HOME/.local/
 
 make -j
 make install
-ln -s ~/build/bin/python3.11 ~/.local/bin/python3
-ln -s ~/build/bin/pip3.11 ~/.local/bin/pip3
